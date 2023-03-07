@@ -1,5 +1,3 @@
- ![computerDog](https://unsplash.com/photos/gySMaocSdqs)
-
 # Welcome to VERPUR!!
 Where you can buy and sell used laptops.
 
