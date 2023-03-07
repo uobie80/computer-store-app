@@ -1,0 +1,160 @@
+body {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.bg-primary {
+  background-color: #a593c2 !important;
+}
+
+
+.plot-body {
+
+  float:left;
+  margin-right: 23px;
+  margin-bottom: 20px;
+}
+
+/* product-details-list */
+.product-details-list{
+  list-style-type: none;
+}
+/* product-details img */
+
+.product-details-img {
+  width: 600px;
+  height: 350px;
+
+}
+
+/* cards */
+
+.card-footer {
+  background: transparent;
+  border-top: 0px;
+}
+
+ .card img {
+ 
+  height: 200px;
+} 
+
+/* sign up */
+
+.sign-up {
+
+  margin-top: 200px;
+}
+
+.submit-btn {
+margin-bottom: 20px;
+}
+
+/* login */
+
+.shopping-bag-icon {
+  margin-left: 120px;
+}
+/* CUSTOMIZE THE CAROUSEL
+-------------------------------------------------- */
+
+/* Carousel base class */
+  /* Since positioning the image, we need to help out the caption */
+  .carousel-caption {
+    bottom: 3rem;
+    z-index: 10;
+  }
+  
+  /* Declare heights because of positioning of img element */
+  .carousel-item {
+    height: 40rem;
+    max-width: 100vw;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    margin-top: 524px;
+  }
+ 
+  .carousel-control-prev {
+    margin-top: 524px;
+  }
+
+  .carousel-control-next {
+    margin-top: 524px;
+  }
+  .welcome-carousel-image1{
+    box-shadow: inset 0 0 0 100vw rgba(0,0,0,0.3);
+    background-image:url('../images/Infinix-Zero-Book-Ultra-5.jpg');
+  }
+
+  .welcome-carousel-image2{
+    box-shadow: inset 0 0 0 100vw rgba(0,0,0,0.3);
+    background-image:url('../images/Infinix-Zero-Book-Ultra-4.jpg');
+  }
+
+  .welcome-carousel-image3{
+    box-shadow: inset 0 0 0 100vw rgba(0,0,0,0.3);
+    background-image:url('../images/macbook-01.jpg');
+  }
+
+  /* Shopping cart offcanvas */
+.shopping-cart-offcanvas {
+  width: 500px;
+}
+
+/* Jumbotron */
+
+.jumbotron-dashboard {
+  background: url('../images/dashboard-background.png');
+  margin-top: 400px;
+}
+
+.jumbotron-subscription {
+  background: url('../images/subscription-background.png');
+  margin-top: 420px;
+}
+.jumbotron-order {
+  background: url('../images/order-background.png');
+  margin-top: 1100px;
+}
+
+.jumbotron-ultraportables {
+  background: url('../../images/Gaming-Keys2.png');
+  margin-top: 150px;
+}
+
+.jumbotron-alllaptops{
+  background: url('../images/alllaptops-background.png');
+  margin-top: 1250px;
+}
+.jumbotron-ultrabooks {
+  background: url('../images/ultrabooks-background.png');
+  margin-top: 150px;
+}
+
+.jumbotron-macbooks {
+  background: url('../images/macbook-background.png');
+  margin-top: 150px;
+}
+
+.jumbotron-signup {
+  background: url('../images/signup-laptop-background.png');
+  margin-top: 540px;
+}
+
+.jumbotron-product-detail {
+  background: url('../images/product-details-background.png');
+  margin-top: 770px;
+}
+
+.jumbotron-other {
+  background: url('../../images/Gaming-Keys2.png');
+  margin-top: 50px;
+}
+
+
+.jumbotron {
+  box-shadow: inset 0 0 0 100vw rgba(0, 0, 0, 0.1);
+  height: 40vh;
+  background-size: cover;
+}

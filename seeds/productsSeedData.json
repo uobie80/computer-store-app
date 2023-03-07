@@ -1,0 +1,169 @@
+[
+    {
+        "make":"MacBook Pro",
+        "model":"M1",
+        "price": "$2,500.00",
+        "image": "/images/macbook-pro-01.png",
+        "page": "macbooks"
+    },
+    {
+        "make":"MacBook Pro",
+        "model":"M2",
+        "price": "$2,900.00",
+        "image": "/images/macbook-pro-02.png",
+        "page": "macbooks"
+    },
+    {
+        "make":"MacBook Pro",
+        "model":"M3",
+        "price": "$2,300.00",
+        "image": "/images/macbook-pro-03.png",
+        "page": "macbooks"
+    },
+    {
+        "make":"Lenovo",
+        "model":"Yoga",
+        "price": "$1,200.00",
+        "image": "/images/ultrabook-lenovo-01.png",
+        "page": "ultrabooks"
+    },
+    {
+        "make":"Lenovo ThinkPad",
+        "model":"P1",
+        "price": "$2,000.00",
+        "image": "/images/ultrabook-lenovo-02.png",
+        "page": "ultrabooks"
+    },
+    {
+        "make": "Lenovo ThinkPad",
+        "model": "P2",
+        "price": "$2,500.00",
+        "image": "/images/ultrabook-lenovo-03.png",
+        "page": "ultrabooks"
+    },
+    {
+        "make":"Dell",
+        "model":"Inspirion",
+        "price": "$1,400.00",
+        "image": "/images/ultraportable-dell-01.png",
+        "page": "ultraportables"
+    },
+    {
+        "make":"Dell",
+        "model":"Precision",
+        "price": "$1,300.00",
+        "image": "/images/ultraportable-dell-02.png",
+        "page": "ultraportables"
+    },
+    {
+        "make":"Dell",
+        "model":"XPS",
+        "price": "$1,100.00",
+        "image": "/images/ultraportable-dell-03.png",
+        "page": "ultraportables"
+    },
+    {
+        "make":"Lenovo",
+        "model":"IdeaPad",
+        "price": "$1,400.00",
+        "image": "/images/home-lenovo-01.png",
+        "page": "home"
+    },
+    {
+        "make":"HP",
+        "model":"Pavillion",
+        "price": "$1,700.00",
+        "image": "/images/home-pavillion-01.png",
+        "page": "home"
+    },
+    {
+        "make":"MacBook",
+        "model":"Pro",
+        "price": "$2,800.00",
+        "image": "/images/home-macbook-01.jpg",
+        "page": "home"
+    },
+    {
+        "make":"Acer",
+        "model":"Aspire",
+        "price": "$1,100.00",
+        "image": "/images/acer-alllaptops-01.png",
+        "page": "alllaptops"
+    },  
+    {
+        "make":"Acer",
+        "model":"Swift 3",
+        "price": "$1,800.00",
+        "image": "/images/acer-alllaptops-02.png",
+        "page": "alllaptops"
+    },
+    {
+        "make":"Acer",
+        "model":"Switch 5",
+        "price": "$1,500.00",
+        "image": "/images/acer-alllaptops-03.png",
+        "page": "alllaptops"
+    },
+    {
+        "make":"Dell",
+        "model":"Inspirion",
+        "price": "$1,400.00",
+        "image": "/images/dell-alllaptops-01.png",
+        "page": "alllaptops"
+    },
+    {
+        "make":"Dell",
+        "model":"Precision",
+        "price": "$2,000.00",
+        "image": "/images/dell-alllaptops-02.png",
+        "page": "alllaptops"
+    },  {
+        "make":"Dell",
+        "model":"XPS",
+        "price": "$1,600.00",
+        "image": "/images/dell-alllaptops-03.png",
+        "page": "alllaptops"
+    },
+    {
+        "make":"Hewlett Packard",
+        "model":"Pavillion",
+        "price": "$2,200.00",
+        "image": "/images/hp-alllaptops-01.png",
+        "page": "alllaptops"
+    },
+    {
+        "make":"Hewlett Packard",
+        "model":"Envy",
+        "price": "$1,600.00",
+        "image": "/images/hp-alllaptops-02.png",
+        "page": "alllaptops"
+    },
+    {
+        "make":"Hewlett Packard",
+        "model":"Elite",
+        "price": "$2,300.00",
+        "image": "/images/hp-alllaptops-03.png",
+        "page": "alllaptops"
+    },  
+    {
+        "make":"MacBook Pro",
+        "model":"M1",
+        "price": "$2,300.00",
+        "image": "/images/macbook-alllaptops-01.png",
+        "page": "alllaptops"
+    },
+    {
+        "make":"MacBook Pro",
+        "model":"M2",
+        "price": "$2,700.00",
+        "image": "/images/macbook-alllaptops-02.png",
+        "page": "alllaptops"
+    },
+    {
+        "make":"MacBook Pro",
+        "model":"M3",
+        "price": "$2,999.00",
+        "image": "/images/macbook-alllaptops-03.png",
+        "page": "alllaptops"
+    }
+]

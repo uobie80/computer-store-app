@@ -1,0 +1,59 @@
+
+<script id="wishl-item-template" type="text/x-handlebars-template">
+{%- comment -%}
+  Handlebars syntax conflicts with liquid,
+  so wrap Handlebars template in a liquid raw tag.
+{%- endcomment -%}
+{% raw %}
+<div id="{{divId}}" data-item="{{itemId}}">
+    <div>
+        <div>
+            <a href="{{product.url}}?variant={{variant.id}}" title="{{product.title}}"><img src="{{featuredImage}}" alt="{{product.title}}" /></a>
+        </div>
+        <div>
+            <p><a href="{{product.url}}?variant={{variant.id}}" title="{{product.title}}">{{{product.title}}}</a></p>
+            {{#if variantOptions}}
+            <ul>
+                {{#each variantOptions}}
+                <li><span>{{this.name}}:</span> {{this.value}}</li>
+                {{/each}}
+            </ul>
+            {{else if variantTitle}}<span>{{variantTitle}}</span>
+            {{/if}}
+            {{#if item.properties}}
+            <ul>
+                {{#each item.properties}}
+                <li><span>{{@key}}:</span> {{this}}</li>
+                {{/each}}
+            </ul>
+            {{/if}}
+            {{#if priceDropped}}
+              <div>{{{priceDropped}}}</div>
+            {{/if}}
+        </div>
+        <div>
+            <div>{{{variantPrice}}} <del>{{{comparePrice}}}</del></div>
+            <form action="/cart/add" method="post">
+            {{#if showAddToCart}}
+                <input type="submit" name="add" value="{{showAddToCart}}" />
+                <input type="hidden" name="id" value="{{variant.id}}" />
+                {{#each item.properties}}
+                <input type="hidden" name="properties[{{@key}}]" value="{{this}}" />
+                {{/each}}
+            {{else if showSoldOut}}
+                <input type="submit" name="add" value="{{showSoldOut}}" disabled="disabled" />
+            {{/if}}
+            </form>
+            <div>
+                {{#if canMoveItem}}
+                <a href="#" data-list-action="move" data-item="{{itemId}}">{{lang.move}}</a>
+                {{/if}}
+                {{#if deleteLabel}}
+                <a href="#" data-item="{{itemId}}" data-item-title="{{product.title}}">{{deleteLabel}}</a>
+                {{/if}}
+            </div>
+        </div>
+    </div>
+</div>
+{% endraw %}
+</script>

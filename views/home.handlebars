@@ -1,0 +1,126 @@
+
+    
+    <main class="container" role="main">       
+       
+        <div id="welcomeCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#welcomeCarousel" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Welcome 1"></button>
+                <button type="button" data-bs-target="#welcomeCarousel" data-bs-slide-to="1"
+                    aria-label="Welcome 2"></button>
+                <button type="button" data-bs-target="#welcomeCarousel" data-bs-slide-to="2"
+                    aria-label="Welcome 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item welcome-carousel-image1 active">
+                    <div class="carousel-caption">
+                        <h1>Welcome to VERPUR</h1>
+                        <p>Home to the best laptops on the internet.</p>
+                    </div>
+                </div>
+                <div class="carousel-item welcome-carousel-image2">
+                    <div class="carousel-caption text-start">
+                        <h1>Discover our subscription deals</h1>
+                        <p>Our Laptops delivered to your door.</p>
+                        <p><a class="btn btn-lg btn-primary" href="/subscription" role="button">Subscription Deals
+                                </a></p>
+                    </div>
+                </div>
+                <div class="carousel-item welcome-carousel-image3">
+                    <div class="carousel-caption text-end">
+                        <h1>Browse laptops</h1>
+                        <p>Every person needs a laptop. </p>
+                        <p><a class="btn btn-lg btn-primary" href="/alllaptops" role="button">Laptops</a></p>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#welcomeCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#welcomeCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+
+        <nav aria-label="breadcrumb" class="my-3 ms-3">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item active" aria-current="page">Home</li>
+            </ol>
+        </nav>
+
+        
+
+        <div class="container history">
+            {{#if logged_in}}
+            <h4> Welcome {{firstname}} {{lastname}}!</h4>
+             {{/if}}
+            <h2 class="pb-4 mb-2 mt-5">Laptops of the week</h2>
+            <div class="row row-cols-1 row-cols-lg-2 row-cols-xxl-3 g-4">
+                
+
+        <!--   {{#each products as |product|}}
+                 <div class="col">
+                    <div class="card rounded mb-4 shadow-sm">
+
+                        <img class="card-img-top" src={{product.image}}>
+                        <div class="card-body">
+                            <h5 class="card-title">{{product.make}} {{product.model}}</h5>
+                             {{#if isPremiumMember}}
+                            <p class="card-text">Discounted Price: {{ calculateDiscount 10000 }}</p>
+                            {{else}}
+                            <p class="card-text">Price: {{product.price}}</p>
+                            {{/if}}
+                        </div>
+                        <div class="card-footer">
+                            <a href="/product-details/{{product.id}}" class="btn btn-primary view-details">View details</a>
+                        </div>
+                    </div>
+                </div>
+          	{{/each}} -->
+
+               {{#if isPremiumMember}}
+                {{#each products as |product|}}
+                 <div class="col">
+                    <div class="card rounded mb-4 shadow-sm">
+
+                        <img class="card-img-top" src={{product.image}}>
+                        <div class="card-body">
+                            <h5 class="card-title">{{product.make}} {{product.model}}</h5>
+                            <p class="card-text">Discounted Price: {{ calculateDiscount product.price }}</p>
+                           
+                        </div>
+                        <div class="card-footer">
+                            <a href="/product-details/{{product.id}}" class="btn btn-primary view-details">View details</a>
+                        </div>
+                    </div>
+                </div>
+                {{/each}}
+                {{else}}
+                  {{#each products as |product|}}
+                 <div class="col">
+                    <div class="card rounded mb-4 shadow-sm">
+
+                        <img class="card-img-top" src={{product.image}}>
+                        <div class="card-body">
+                            <h5 class="card-title">{{product.make}} {{product.model}}</h5>
+                            <p class="card-text">Price: {{ product.price }}</p>
+                           
+                        </div>
+                        <div class="card-footer">
+                            <a href="/product-details/{{product.id}}" class="btn btn-primary view-details">View details</a>
+                        </div>
+                    </div>
+                </div>
+                {{/each}}
+                 {{/if}}
+
+
+            </div>
+        </div>
+        </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>

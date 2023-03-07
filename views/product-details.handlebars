@@ -1,0 +1,302 @@
+    <main class="container" role="main">
+        <div class="container-fluid jumbotron jumbotron-product-detail py-5">
+            <div class="container">
+                <h1 class="display-3 fw-bold text-white">Product Details</h1>
+            </div>
+        </div>
+
+        <div class="container">
+
+            <nav class="my-3 ms-3" style="--bs-breadcrumb-divider: '>';">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="/home">Home</a></li>
+                    <li class="breadcrumb-item"><a href="#">Laptops</a></li>
+                    <li class="breadcrumb-item"><a href="/ultrabooks">Ultrabooks</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Ultrabook</li>
+                </ol>
+            </nav>
+
+            <h1 class="fw-bolder">Your Selection
+                <small class="fw-normal fst-italic">To join in the industrial revolution, you needed to open a factory; in the Internet revolution, you need to open a laptop.  Alexis Ohanian</small>
+            </h1>
+
+            <div class="row ">
+                <div class="col-6 col-lg-8">
+                    <img src={{ product.image }} class="img-fluid rounded-1 product-details-img">
+                </div>
+
+                <div class="col-6 col-lg-4">
+                    <h3 class="my-3">About this laptop</h3>
+                    <p class="lead text-center">Pre-owned products are inspected and verified to function properly. May not include all parts and accessories, and usually, do not have original packaging.
+
+                        Pre-owned products sold by VERPER often include a limited warranty, and are backed by VERPUR's Return & Exchange Promise.</p>
+                    
+                    <h3>Overview</h3>
+                 <!--   <ul class="product-details-list">
+                       <b>Make:</b> <li id="make"> {{product.make}}</li>
+                       <b>Model:</b> <li id="model"> {{product.model}}</li>
+                        {{#if isPremiumMember}}
+                       <b>Discounted Price:</b> <li id="discount-price"> {{calculateDiscount product.price}}</li>
+                        {{else}}
+                       <b>Price:</b> <li id="original-price"> {{product.price}}</li>
+                        {{/if}}
+                    </ul> -->
+
+                      <table class="table table-hover">
+                        <tr>
+                            <td>
+                                <tr><td><b>Make:</b></td><td id="make">{{product.make}}</td></tr>
+                                <tr><td><b>Model:</b></td><td id="model">{{product.model}}</td></tr>
+                                {{#if isPremiumMember}}
+                                <tr><td><b>Discounted Price:</b></td><td id="discount-price">{{calculateDiscount product.price}}</td></tr>
+                                 {{else}}
+                                 <tr><td><b>Price:</b></td><td id="original-price">{{product.price}}</td></tr>
+                                 {{/if}}
+                            </td>
+                        </tr>
+                    </table>
+
+                    <div class="row">
+
+                       
+                        <div class="col-md-8">
+                            <a type="button" href="#" class="btn btn-success float-end"
+                                data-bs-toggle="offcanvas" data-bs-target="#shoppingCart" aria-controls="shoppingCart">
+                                Add to cart
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="p-4 mb-3 mt-2 bg-light rounded border border-primary">
+                <h4>A message from VERPUR</h4>
+                <p class="mb-0 fst-italic">We test and certify every laptop so you know you can recieve the best
+                    possible product! -
+                    VERPER
+                </p>
+            </div>
+
+            <div class="row p-3">
+                <div class="table-responsive my-3">
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th>Compare</th>
+                                <th>Us</th>
+                                <th>Ebay</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>laptop A</td>
+                                <td>$</td>
+                                <td>$</td>
+                            </tr>
+                            <tr>
+                                <td>laptop B</td>
+                                <td>$</td>
+                                <td>$</td>
+                            </tr>
+                            <tr>
+                                <td>laptop C</td>
+                                <td>$</td>
+                                <td>$</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+          <!--  <h3 class="display-5 my-4">Other customers also bought...</h3> 
+
+            <div class="row">
+                <div class="col-md-3 col-sm-6 mb-3">
+                    <a href="applepie.html">
+                        <img class="img-fluid" src="images/products/strawberrypiesmall.jpg" alt="">
+                    </a>
+                </div>
+
+                <div class="col-md-3 col-sm-6 mb-3">
+                    <a href="applepie.html">
+                        <img class="img-fluid" src="images/products/rhubarbpiesmall.jpg" alt="">
+                    </a>
+                </div>
+
+                <div class="col-md-3 col-sm-6 mb-3">
+                    <a href="applepie.html">
+                        <img class="img-fluid" src="images/products/peachpiesmall.jpg" alt="">
+                    </a>
+                </div>
+
+                <div class="col-md-3 col-sm-6 mb-3">
+                    <a href="applepie.html">
+                        <img class="img-fluid" src="images/products/cranberrypiesmall.jpg" alt="">
+                    </a>
+                </div>
+            </div> -->
+        </div>
+
+        <div class="offcanvas offcanvas-start shopping-cart-offcanvas" data-bs-scroll="true" tabindex="-1"
+            id="shoppingCart" aria-labelledby="shoppingCartLabel">
+
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="shoppingCartLabel">Your shopping cart</h5>
+                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                    aria-label="Close"></button>
+            </div>
+
+            <div class="offcanvas-body">
+                <div class="table-responsive">
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th>Product</th>
+                                <th>Quantity</th>
+                                <th class="text-center">Price</th>
+                                <th class="text-center">Total</th>
+                                <th> </th>
+                            </tr>
+                        </thead>
+                        <tbody id="shopping-cart-items">
+                            <!--
+                            <tr>
+                                <td class="col-sm-8 col-md-6">
+                                    <div class="media">
+                                        <img class="mr-3 thumbnail img-fluid" width="75"
+                                            src={{ product.image }} alt="{{product.make}} {{produc.model}}">
+                                        <div class="media-body">
+                                            <h5 class="mt-0 media-heading text-primary">{{ product.make }} {{ product.model }}</h5>
+                                            <span>Status: </span><span class="text-success"><strong>In
+                                                    Stock</strong></span>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="col-sm-1 col-md-1" style="text-align: center">
+                                    <input type="number" class="form-control" value="1">
+                                </td>
+                                {{#if isPremiumMember}}
+                                <td class="col-sm-1 col-md-1 text-center"><strong>{{ calculateDiscount product.price }}</strong></td>
+                                <td class="col-sm-1 col-md-1 text-center"><strong>{{ calculateDiscount product.price }}</strong></td>
+                               {{else}}
+                                <td class="col-sm-1 col-md-1 text-center"><strong>{{ product.price }}</strong></td>
+                                <td class="col-sm-1 col-md-1 text-center"><strong>{{ product.price }}</strong></td>
+                               {{/if}}
+                                <td class="col-sm-1 col-md-1">
+                                    <button type="button" class="btn btn-danger delete-btn">
+                                        X
+                                    </button>
+                                </td>
+                            </tr> -->
+
+                        <!--    <tr>
+                                <td class="col-sm-8 col-md-6">
+                                    <div class="media">
+                                        <img class="mr-3 thumbnail" width="75" src="./images/laptop-04.jpg"
+                                            alt="apple pie">
+                                        <div class="media-body">
+                                            <h5 class="mt-0 media-heading text-primary">Laptop B</h5>
+                                            <span>Status: </span><span class="text-warning"><strong>Last
+                                                    items</strong></span>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="col-sm-1 col-md-1" style="text-align: center">
+                                    <input type="number" class="form-control" value="1">
+                                </td>
+                                <td class="col-sm-1 col-md-1 text-center"><strong>$29.99</strong></td>
+                                <td class="col-sm-1 col-md-1 text-center"><strong>$29.99</strong></td>
+                                <td class="col-sm-1 col-md-1">
+                                    <button type="button" class="btn btn-danger delete-btn">
+                                        X
+                                    </button>
+                                </td>
+                            </tr> -->
+                            <tr id="subtotal">
+                                <td colspan="3" class="text-right">
+                                    <h5>Subtotal</h5>
+                                </td>
+                                <td class="text-center">
+
+                             {{#if isPremiumMember}}
+                              <h5><strong>{{ calculateDiscount product.price }}</strong></h5>
+                            {{else}}
+                              <h5><strong>{{ product.price }}</strong></h5>
+                              {{/if}}
+                                    
+                                </td>
+                                <td></td>
+                            </tr>
+                            <tr id="shipping">
+                                <td colspan="3" class="text-right">
+                                    <h5>Shipping</h5>
+                                </td>
+                                <td class="text-center">
+                                    <h5><strong>$0.00</strong></h5>
+                                </td>
+                                <td></td>
+                            </tr>
+                            <tr id="total">
+                                <td colspan="3" class="text-right">
+                                    <h3>Total</h3>
+                                </td>
+                                <td class="text-center">
+                               {{#if isPremiumMember}}
+                                 <h3><strong>{{ calculateDiscount product.price }} </strong></h3>
+                                 {{else}}
+                                 <h3><strong>{{ product.price }} </strong></h3>
+                                {{/if}}
+                                  
+                                </td>
+                                <td></td>
+
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+
+                <form class="m-1">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Promo code">
+                        <div class="input-group-append">
+                            <button type="button" class="btn btn-secondary">Redeem</button>
+                        </div>
+                    </div>
+                </form>
+                <a type="button" href="/order" class="m-1 btn btn-success">
+                    Go to order page
+                </a>
+
+                <a type="button" href="" class="m-1 btn btn-danger" data-bs-toggle="modal"
+                    data-bs-target="#cancelModal">
+                    Clear your shopping cart
+                </a>
+
+            </div>
+
+        </div>
+
+        <div class="modal fade" id="cancelModal" tabindex="-1" aria-labelledby="cancelModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Clear basket</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        Are you sure you want to clear your cart?
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                        <button type="button" class="btn btn-danger" id="clear-shopping-cart">Yes</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+<script src="/js/shoppingcart.js"></script>
